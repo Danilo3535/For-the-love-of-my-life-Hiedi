@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +8,11 @@
 </head>
 <body>
   <div id="bg"></div>
+
+  <!-- Falling roses background -->
+  <div id="roses-container" aria-hidden="true"></div>
+
+  <!-- Hearts (start at final) -->
   <div id="hearts-container" aria-hidden="true"></div>
 
   <!-- 3love gifs ALWAYS visible until final -->
@@ -42,7 +46,7 @@
         <strong>P.S.</strong> I cried for about 30 minutes while writing this — that’s how IMPORTANT you are to me.
       </p>
 
-      <!-- FINAL: love2 + big photo + love2 (one flipped), shown after final only -->
+      <!-- FINAL: love2 + big photo + love2 (one flipped) -->
       <div id="finalCluster" class="final-cluster hidden" aria-hidden="true">
         <img class="cluster-gif flip" src="love2.gif" alt="">
         <img class="cluster-photo" src="cat_suit.png" alt="">
@@ -53,10 +57,9 @@
     </section>
   </main>
 
-  <!-- Optional music (starts after first YES) -->
-  <audio id="loveSong" src="gluesong.mp3" preload="auto"></audio>
+  <!-- Music loops forever -->
+  <audio id="loveSong" src="gluesong.mp3" preload="auto" loop></audio>
 
   <script src="script.js"></script>
 </body>
 </html>
-
