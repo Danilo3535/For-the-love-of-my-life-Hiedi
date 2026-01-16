@@ -1,26 +1,35 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Valentine</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For the Love of my life Hiedi</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="bg"></div>
+  <div id="hearts-container" aria-hidden="true"></div>
 
-<div id="hearts-container"></div>
+  <!-- 3love gifs ALWAYS visible until final -->
+  <img id="love3Left" class="love3-gif" src="3love.gif" alt="">
+  <img id="love3Right" class="love3-gif love3-right" src="3love.gif" alt="">
 
-<h1 id="question">Will you be my Valentine?</h1>
+  <main class="card" role="main">
+    <h1 id="question">Will you be my Valentine?</h1>
 
-<div class="buttons">
-    <button class="yes-button" onclick="handleYesClick()">YES</button>
-    <button class="no-button" onclick="handleNoClick()">NO</button>
-</div>
+    <div class="buttons" id="buttons">
+      <button class="btn yes-button" id="yesBtn" type="button">YES</button>
+      <button class="btn no-button" id="noBtn" type="button">NO</button>
+    </div>
 
-<div id="final-message" class="hidden">
-    <h2>I LOVE YOU HIEDI SO MUCHHHH ❤️</h2>
-    <h3>I AM HAPPY THAT YOU ARE MY VALENTINE 💖</h3>
+    <div class="hint" id="hint" aria-live="polite"></div>
 
-    <p class="long-text">
+    <section id="final" class="final hidden" aria-live="polite">
+      <h2>I LOVE YOU HIEDI SO MUCHHHH</h2>
+      <h3>I AM HAPPY THAT YOU ARE MY VALENTINE</h3>
+
+      <p class="long-text">
         From the very first day we talked, you made me realize that maybe life isn’t entirely made of gray days and painful memories.
         You showed me that after so many years of trauma, I could truly enjoy life again — especially with someone as special as you.
         <br><br>
@@ -30,12 +39,23 @@
         I hope I am the only boy in your eyes, and that no one will ever take you away from me.
         I love you, and I will love you until my very last days on this earth.
         <br><br>
-        <strong>P.S.</strong> I cried for about 15 minutes while writing this — that’s how IMPORTANT you are to me. ❤️
-    </p>
-</div>
+        <strong>P.S.</strong> I cried for about 15 minutes while writing this — that’s how IMPORTANT you are to me.
+      </p>
 
-<audio id="loveSong" src="gluesong.mp3"></audio>
+      <!-- FINAL: love2 + big photo + love2 (one flipped), shown after final only -->
+      <div id="finalCluster" class="final-cluster hidden" aria-hidden="true">
+        <img class="cluster-gif flip" src="love2.gif" alt="">
+        <img class="cluster-photo" src="cat_suit.png" alt="">
+        <img class="cluster-gif" src="love2.gif" alt="">
+      </div>
 
-<script src="script.js"></script>
+      <button class="btn play-button hidden" id="playBtn" type="button">Play music</button>
+    </section>
+  </main>
+
+  <!-- Optional music (starts after first YES) -->
+  <audio id="loveSong" src="gluesong.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
